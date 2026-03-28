@@ -26,11 +26,17 @@ Students in Tirana often face difficulties in finding part-time jobs that fit th
 ## Proposed Solution:
 
 TESS (Tirana Employment Service for Students) is a job-matching platform designed to efficiently connect students seeking part-time employment with companies offering flexible job opportunities. The system addresses the main problem of schedule conflicts between academic activities and work requirements by introducing a matching mechanism based on student availability and job scheduling.  
+
 The platform allows students to create personal accounts and build detailed profiles that include personal information, skills, CV uploads and their availability schedule based on their academic timetable. This schedule is a key element of the system, as it enables automatic filtering of job opportunities that do not overlap with the student’s class hours. Students can browse available job listings, apply for positions and track the status of their applications in real time.  
+
 On the employer side, companies can register on the platform and create job postings by specifying job descriptions, required skills and exact working hours or shifts. Employers can review applications, shortlist candidates and manage the recruitment process through the platform.  
+
 A key component of the proposed solution is the automated job-student matching system, which ensures that only compatible job opportunities are shown to students based on time availability and basic skill requirements. This reduces inefficiencies in the hiring process and increases the likelihood of successful employment matches.  
+
 In addition, the system includes an integrated virtual interview feature that allows employers and students to conduct interviews directly within the platform. Once an employer selects a candidate for an interview, the system automatically generates a secure meeting room accessible through a unique URL. Both parties can join the same virtual room at the scheduled time and communicate in real time using video and audio. This eliminates the need for external communication tools and keeps the entire recruitment process centralized within the system.  
+
 Furthermore, the platform incorporates a notification system to keep users informed about important events such as application updates, interview scheduling and job acceptance decisions. An administrative module is also included to manage users, monitor system activity, and ensure platform security and integrity.  
+
 Overall, TESS provides a centralized and efficient solution for student employment by combining job matching, scheduling compatibility analysis, and real-time communication into a single unified system.
 
 ## Project Scope:
