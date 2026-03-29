@@ -1,19 +1,19 @@
 
-# SE_Project_Phase1_TeamA5
+# SE_Project_Phase_TeamA5
 
 # 1. Team Information
 
-## Team Name: 
+## Team Name: SmartShift
 
-## Team Leader:
-- Name: Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al
+## Team Leader:  
+Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al  
 
 ## Team Members:
-1. Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al  
-2. Dea Laci - GitHub: dlaci23-svg - Email: dlaci23@epoka.edu.al
-3. Denisa Rica - GitHub: denisrica - Email: drica23@epoka.edu.al  
-4. Edisa Ajdinolli - GitHub: edisa-hub - Email: eajdinolli23@epoka.edu.al  
-5. Hegi Dosti - GitHub:  hdosti23 - Email: hdosti23@epoka.edu.al
+- Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al  
+- Dea Laci - GitHub: dlaci23-svg - Email: dlaci23@epoka.edu.al
+- Denisa Rica - GitHub: denisrica - Email: drica23@epoka.edu.al  
+- Edisa Ajdinolli - GitHub: edisa-hub - Email: eajdinolli23@epoka.edu.al  
+- Hegi Dosti - GitHub: hdosti23 - Email: hdosti23@epoka.edu.al
 
 # 2. Project Details
 
@@ -25,7 +25,7 @@ Students in Tirana often face difficulties in finding part-time jobs that fit th
 
 ## Proposed Solution:
 
-TESS (Tirana Employment Service for Students) is a job-matching platform designed to efficiently connect students seeking part-time employment with companies offering flexible job opportunities. The system addresses the main problem of schedule conflicts between academic activities and work requirements by introducing a matching mechanism based on student availability and job scheduling.  
+TESS (Tirana Employment Service for Students) is a job-matching platform designed to efficiently connect students seeking part-time employment with companies offering flexible job opportunities. The system addresses the main problem of schedule conflicts between academic activities and work requirements by introducing a matching mechanism based on student availability and job requirements.  
 
 The platform allows students to create personal accounts and build detailed profiles that include personal information, skills, CV uploads and their availability schedule based on their academic timetable. This schedule is a key element of the system, as it enables automatic filtering of job opportunities that do not overlap with the student’s class hours. Students can browse available job listings, apply for positions and track the status of their applications in real time.  
 
@@ -35,9 +35,11 @@ A key component of the proposed solution is the automated job-student matching s
 
 In addition, the system includes an integrated virtual interview feature that allows employers and students to conduct interviews directly within the platform. Once an employer selects a candidate for an interview, the system automatically generates a secure meeting room accessible through a unique URL. Both parties can join the same virtual room at the scheduled time and communicate in real time using video and audio. This eliminates the need for external communication tools and keeps the entire recruitment process centralized within the system.  
 
-Furthermore, the platform incorporates a notification system to keep users informed about important events such as application updates, interview scheduling and job acceptance decisions. An administrative module is also included to manage users, monitor system activity, and ensure platform security and integrity.  
+Furthermore, the platform incorporates a notification system to keep users informed about important events such as application updates, interview scheduling and job acceptance decisions. An administrative module is also included to manage users, monitor system activity and ensure platform security and integrity.  
 
-Overall, TESS provides a centralized and efficient solution for student employment by combining job matching, scheduling compatibility analysis, and real-time communication into a single unified system.
+The system also includes a messaging feature that allows direct communication between students and employers within the platform.
+
+Overall, TESS provides a centralized and efficient solution for student employment by combining job matching, scheduling compatibility analysis and real-time communication into a single unified system.
 
 ## Project Scope:
 
@@ -45,28 +47,28 @@ The aim of the project is to design and develop a smart and user-friendly platfo
 
 Objectives:
 - Develop a secure user authentication system for students, employers, and admin.
-- Implement student profile management including skills, CV, and weekly availability schedule.
+- Implement student profile management including skills, CV and availability schedule.
 - Design a job posting and management system for employers.
 - Create a matching mechanism that filters jobs based on student availability.
 - Implement a job application and tracking system.
 - Develop an integrated virtual interview feature using real-time communication within the platform.
 - Create an admin dashboard for managing users and job postings.
-- Implement a notification system for job applications, acceptance, and interview scheduling.
+- Implement a notification system for job applications, acceptance and interview scheduling.
 - Ensure system security through authentication and role-based access control.
 - Design a responsive and user-friendly interface.
 
 # 3. Application Description:
 
-TESS (Tirana Employment Service for Students) is a platform designed to facilitate the connection between students seeking part-time employment and companies offering flexible job opportunities. The system is structured around three main user roles: students, employers (companies), and administrators, each with specific functionalities and responsibilities within the platform.
+TESS (Tirana Employment Service for Students) is a platform designed to facilitate the connection between students seeking part-time employment and companies offering flexible job opportunities. The system is structured around three main user roles: students, employers (companies) and administrators each with specific functionalities and responsibilities within the platform.
 
 ## Students
 
-Students represent the primary users of the system. They are able to register and create personal accounts by providing essential information such as name, contact details, academic background, skills, and a structured weekly availability schedule based on their university timetable.
+Students represent the primary users of the system. They are able to register and create personal accounts by providing essential information such as name, contact details, academic background, skills and a structured availability schedule based on their university timetable.
 
 Once registered, students can:
 - Build and update their personal profiles
 - Upload CVs and list relevant skills
-- Define their availability in terms of weekly time slots
+- Define their availability in terms of certain time slots
 - Browse available job opportunities
 - Apply for part-time jobs that match their skills and schedule compatibility
 - Track the status of their applications (pending, accepted, rejected)
@@ -83,13 +85,14 @@ Employers are able to:
 - Define job requirements including required skills and working hours or shifts
 - View and filter applications submitted by students
 - Shortlist and select candidates based on compatibility
+- Communicate with students through the messaging system
 - Manage the recruitment workflow within the platform
 
 Once a candidate is selected for further evaluation, the employer can initiate the interview process directly through the system.
 
 ## Administrators
 
-Administrators are responsible for maintaining and supervising the platform. Their role is to ensure system integrity, security, and proper usage of the application.
+Administrators are responsible for maintaining and supervising the platform. Their role is to ensure system integrity, security and proper usage of the application.
 
 Administrators can:
 - Manage user accounts (students and employers)
@@ -105,12 +108,13 @@ The system integrates multiple modules into a unified platform, including:
 - Role-based access control (students, employers, administrators)
 - Student profile and schedule management
 - Employer job posting and recruitment management system
-- Intelligent job matching based on availability and skills
+- Job matching based on availability and skills
+- Real-time messaging between students and employers
 - Integrated real-time virtual interview system
 - Notification system for job updates and interviews
 - Administrative dashboard for system monitoring and control
 
-Overall, TESS provides a centralized, efficient, and intelligent solution for student employment by combining job matching, scheduling optimization, and real-time communication into a single platform.
+Overall, TESS provides a centralized, efficient and intelligent solution for student employment by combining job matching, scheduling optimization and real-time communication into a single platform.
 
 # 4. Roles and Tasks
 
@@ -122,9 +126,29 @@ Ajlin Hoxha
 
 ## Team Members:
 
-1. Ajlin Hoxha 
-2. Dea Laci 
-3. Denisa Rica  
-4. Edisa Ajdinolli 
-5. Hegi Dosti
+1. Ajlin Hoxha – Backend Developer  
+   - Design and implement APIs  
+   - Database integration  
+   - Authentication system  
+
+2. Dea Laci – Frontend Developer
+    - Build UI: ( Student, Employer, Admin dashboard, Login/Register pages)    
+    - Connect frontend to backend APIs
+    - Test API responses in frontend
+
+4. Denisa Rica – Database Designer  
+   - Design database schema
+   - Define relationships
+   - Normalize database
+   - Assist with frontend
+
+5. Edisa Ajdinolli – System Analyst 
+   - Define system requirements  
+   - Prepare UML diagrams
+   - Define system workflows
+
+6. Hegi Dosti – QA & Backend Support Tester  
+   - Test all backend APIs
+   - Test frontend-backend integration
+   - Identify and report bugs  
 
