@@ -25,7 +25,7 @@ Students in Tirana often face difficulties in finding part-time jobs that fit th
 
 ## Proposed Solution:
 
-TESS (Tirana Employment Service for Students) is a job-matching platform designed to efficiently connect students seeking part-time employment with companies offering flexible job opportunities. The system addresses the main problem of schedule conflicts between academic activities and work requirements by introducing a matching mechanism based on student availability and job requirements.  
+TESS (Tirana Employment Service for Students) is a job-matching platform designed to efficiently connect students seeking part-time employment or one-time jobs with employers offering flexible job opportunities. The system addresses the main problem of schedule conflicts between academic activities and work requirements by introducing a matching mechanism based on student availability and job requirements.  
 
 The platform allows students to create personal accounts and build detailed profiles that include personal information, skills, CV uploads and their availability schedule based on their academic timetable. This schedule is a key element of the system, as it enables automatic filtering of job opportunities that do not overlap with the student’s class hours. Students can browse available job listings, apply for positions and track the status of their applications in real time.  
 
@@ -137,7 +137,7 @@ Ajlin Hoxha
    - Integrate frontend with backend APIs  
    - Assist in testing and improving user experience  
 
-3. Denisa Rica – Database Designer  
+3. Denis Rica – Database Designer  
    - Design and manage the database schema  
    - Define relationships between system entities  
    - Support data organization and consistency  
@@ -149,6 +149,6 @@ Ajlin Hoxha
 
 5. Hegi Dosti – Backend Developer & QA  
    - Assist in backend development and implementation of backend functionalities and APIs  
-   - Test system functionalities and API endpoints  
+   - Test system functionalities and API endpoints to ensure reliability 
    - Support system integration and identify issues
 
