@@ -1,5 +1,5 @@
 
-# SE_Project_Phase_TeamA5
+# SE_Project_Phase1_TeamA5
 
 # 1. Team Information
 
@@ -11,7 +11,7 @@ Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al
 ## Team Members:
 - Ajlin Hoxha - GitHub: ajlin11 - Email: ajhoxha23@epoka.edu.al  
 - Dea Laci - GitHub: dlaci23-svg - Email: dlaci23@epoka.edu.al
-- Denisa Rica - GitHub: denisrica - Email: drica23@epoka.edu.al  
+- Denis Rica - GitHub: denisrica - Email: drica23@epoka.edu.al  
 - Edisa Ajdinolli - GitHub: edisa-hub - Email: eajdinolli23@epoka.edu.al  
 - Hegi Dosti - GitHub: hdosti23 - Email: hdosti23@epoka.edu.al
 
@@ -126,29 +126,29 @@ Ajlin Hoxha
 
 ## Team Members:
 
-1. Ajlin Hoxha – Backend Developer  
-   - Design and implement APIs  
-   - Database integration  
-   - Authentication system  
+1. Ajlin Hoxha – Project Manager & Backend Developer  
+   - Coordinate project tasks and ensure deadlines are met  
+   - Design and implement core backend functionalities and APIs  
+   - Oversee system architecture and integration between components  
+   - Support authentication and overall system logic  
 
-2. Dea Laci – Frontend Developer
-    - Build UI: ( Student, Employer, Admin dashboard, Login/Register pages)    
-    - Connect frontend to backend APIs
-    - Test API responses in frontend
+2. Dea Laci – Frontend Developer  
+   - Design and implement user interfaces (student, employer, admin dashboards)  
+   - Integrate frontend with backend APIs  
+   - Assist in testing and improving user experience  
 
-4. Denisa Rica – Database Designer  
-   - Design database schema
-   - Define relationships
-   - Normalize database
-   - Assist with frontend
+3. Denisa Rica – Database Designer  
+   - Design and manage the database schema  
+   - Define relationships between system entities  
+   - Support data organization and consistency  
 
-5. Edisa Ajdinolli – System Analyst 
-   - Define system requirements  
-   - Prepare UML diagrams
-   - Define system workflows
+4. Edisa Ajdinolli – Frontend Developer & System Support  
+   - Assist in frontend development and UI improvements   
+   - Support authentication-related features  
+   - Contribute to system documentation and basic workflows   
 
-6. Hegi Dosti – QA & Backend Support Tester  
-   - Test all backend APIs
-   - Test frontend-backend integration
-   - Identify and report bugs  
+5. Hegi Dosti – Backend Developer & QA  
+   - Assist in backend development and implementation of backend functionalities and APIs  
+   - Test system functionalities and API endpoints  
+   - Support system integration and identify issues
 
