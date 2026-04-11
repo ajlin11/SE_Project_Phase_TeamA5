@@ -107,8 +107,8 @@ needed to be clearly specified from the beginning.
 6. The system should protect user data from unauthorized access.
 7. The system should be easy to use and navigate.
 8. The system should have a clear and simple interface.
-9. The system should be compatible with modern web browsers.
-10. The system should be accessible from different devices (desktop, mobile).
+9. The system should provide clear feedback after user actions.
+10. The system should ensure reliable data storage and retrieval.
 11. The system should ensure data consistency.
 12. The system should prevent data loss.
 13. The system should provide error messages when failures occur.
@@ -140,7 +140,7 @@ needed to be clearly specified from the beginning.
 - Only authenticated users can access protected features
 
 #### Usability
-- Users can complete main actions (login, apply) within 3 steps
+- Users can complete main actions (login, apply) within few steps
 - Interface is consistent across pages
 
 #### Real-Time Communication
@@ -182,6 +182,12 @@ Relationships:
 Constraints:
 - Email must be unique
 - Each application must reference a valid student and job
+- Each job must be linked to a valid employer
+- A user must have a defined role (student, employer, admin)
+- Messages must include a valid sender and receiver
+- Each interview must be linked to a valid application
+- Application status must be one of: pending, accepted, rejected
+- Required fields (email, password) cannot be empty
 
 ### c. Technologies Used
 
@@ -194,12 +200,12 @@ The system runs on modern operating systems such as Windows and can be deployed 
 
 ### d. User Interface Design
 
-The system provides a simple, clean, and user-friendly interface designed for three types of users: students, employers, and administrators.
+The system provides a simple, clean and user-friendly interface designed for three types of users: students, employers and administrators.
 
 #### Main Pages and Components:
 
 - Login / Registration Page:
-  Users can create an account or log in using their credentials. The page includes input fields for email and password, and buttons for login and registration.
+  Users can create an account or log in using their credentials. The page includes input fields for email and password and buttons for login and registration.
 
 - Student Dashboard:
   Students can view available jobs, manage their profile, update their availability schedule, and track their applications. The dashboard includes:
@@ -255,7 +261,7 @@ The system implements several security measures to protect user data and ensure 
   Data exchanged between the frontend and backend is protected to prevent unauthorized interception.
 
 - Input Validation:
-  All user inputs are validated to prevent invalid or harmful data from entering the system.
+  All user inputs are validated to prevent invalid data from entering the system.
 
 - Data Protection:
   User information is stored securely and only accessible by authorized users.
