@@ -191,7 +191,7 @@ Constraints:
 
 ### c. Technologies Used
 
-- Backend: Java with Spring Boot (chosen for its structure and scalability)
+- Backend: Java with Spring Boot/Python (chosen for its structure and scalability)
 - Frontend: React (for building a responsive and dynamic user interface)
 - Database: PostgreSQL (for reliable data storage and relationships)
 - Version Control: GitHub (for collaboration and version management)
