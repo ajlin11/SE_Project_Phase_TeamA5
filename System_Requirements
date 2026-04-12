@@ -154,8 +154,8 @@ needed to be clearly specified from the beginning.
 The system follows a three-tier architecture consisting of:
 
 - Frontend (React): Handles the user interface and user interactions.
-- Backend (Spring Boot): Manages business logic, APIs and communication between components.
-- Database (PostgreSQL): Stores user data, job postings, applications and messages.
+- Backend (Spring Boot/Python): Manages business logic, APIs and communication between components.
+- Database (PostgreSQL): Stores all persistent system data.
 
 The frontend sends requests to the backend through REST APIs. The backend processes the requests, applies business logic
 and communicates with the database. The system also supports real-time communication for messaging and interview features.
