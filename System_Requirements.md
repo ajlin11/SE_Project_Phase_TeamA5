@@ -56,13 +56,17 @@ needed to be clearly specified from the beginning.
 11. The system shall allow scheduling of interviews.
 12. The system shall generate a unique meeting link for interviews.
 13. The system shall allow users to join virtual interview rooms.
-14. The system shall send notifications for important actions.
-15. The system shall allow admins to manage users.
-16. The system shall allow admins to manage job postings.
-17. The system shall allow role-based access control.
-18. The system shall store user and job data in a database.
-19. The system shall allow users to view application status.
-20. The system shall allow employers to filter candidates.
+14. The system shall allow admins to manage users.
+15. The system shall allow admins to manage job postings.
+16. The system shall allow role-based access control.
+17. The system shall allow users to view application status.
+18. The system shall allow employers to filter candidates.
+19. The system shall allow users to log out of their accounts.
+20. The system shall allow users to update their account information.
+21. The system shall allow students to upload a CV.
+22. The system shall allow employers to edit job postings.
+23. The system shall allow employers to delete job postings.
+24. The system shall allow admins to deactivate user accounts.
 
 ### b. Acceptance Criteria
 
@@ -132,7 +136,7 @@ needed to be clearly specified from the beginning.
 - API responses return within 2 seconds
 
 #### Availability
-- System uptime is at least 98%
+- System uptime is at least 99%
 - System is accessible 24/7
 
 #### Security
