@@ -67,6 +67,10 @@ needed to be clearly specified from the beginning.
 22. The system shall allow employers to edit job postings.
 23. The system shall allow employers to delete job postings.
 24. The system shall allow admins to deactivate user accounts.
+25. The system shall validate student registration using institutional email domains.
+26. The system shall verify that student age is within the allowed range.
+27. The system shall allow students to upload a student ID for optional verification.
+28. The system shall require users to confirm that they are active students during registration.
 
 ### b. Acceptance Criteria
 
@@ -168,20 +172,25 @@ and communicates with the database. The system also supports real-time communica
 
 The system uses a PostgreSQL database with the following main tables:
 
-- Users: Stores general user information (id, email, password, role etc)
-- Students: Stores student-specific data (skills, availability etc)
-- Employers: Stores company information
-- Jobs: Contains job postings (title, description, schedule)
-- Applications: Links students to jobs and tracks application status
-- Messages: Stores communication between users
-- Interviews: Stores interview details and meeting links
+- User: Stores general user information (id, email, password, role)
+- Student: Stores student-specific data and links to User
+- Employer: Stores company information and links to User
+- Job: Contains job postings (title, description, schedule, employer_id)
+- Application: Links students to jobs and tracks application status
+- Message: Stores communication between users
+- Interview: Stores interview details and meeting links
+- Availability: Stores student availability (day, time slots)
 
 Relationships:
-- A user can be a student or employer
-- A student can apply to multiple jobs
-- Each job belongs to one employer
-- Each application links one student to one job
-- Messages are exchanged between users
+- A User can have a role: student, employer or admin
+- A Student is linked to one User
+- An Employer is linked to one User
+- A Student can apply to multiple Jobs
+- Each Job belongs to one Employer
+- Each Application links one Student to one Job
+- Messages are exchanged between Users
+- Each Interview is linked to an Application
+- Availability is linked to a Student
 
 Constraints:
 - Email must be unique
@@ -254,6 +263,10 @@ The system implements several security measures to protect user data and ensure 
 
 - Authentication:
   Users must register and log in to access the system. Only authenticated users can perform actions.
+  The system verifies student accounts using institutional email domains.
+  The system may allow optional student ID upload for additional verification.
+  The system requires users to confirm their student status during registration.
+  Administrators can review and deactivate suspicious accounts.
 
 - Password Protection:
   User passwords are encrypted before being stored in the database to prevent unauthorized access.
@@ -269,5 +282,6 @@ The system implements several security measures to protect user data and ensure 
 
 - Data Protection:
   User information is stored securely and only accessible by authorized users.
+
 
 These measures ensure that the system remains secure and reliable to common security threats.
