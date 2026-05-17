@@ -57,12 +57,12 @@ public class User {
     @UpdateTimestamp
     private LocalDateTime updatedAt;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"user", "availabilities", "applications", "hibernateLazyInitializer"})
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Student student;
 
-    @JsonIgnore
-    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonIgnoreProperties({"user", "jobs", "hibernateLazyInitializer"})
+    @OneToOne(mappedBy = "user", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Employer employer;
 
     @JsonIgnore
