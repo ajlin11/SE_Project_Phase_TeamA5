@@ -40,10 +40,14 @@ public class AdminController {
     // ---------- User Management ----------
 
     @GetMapping("/users")
-    @Operation(summary = "List all users with pagination")
     public ResponseEntity<ApiResponse<Page<User>>> getAllUsers(
             @PageableDefault(size = 20) Pageable pageable) {
-        return ResponseEntity.ok(ApiResponse.success(adminService.getAllUsers(pageable)));
+        Page<User> users = adminService.getAllUsers(pageable);
+        users.getContent().forEach(u -> {
+            if (u.getStudent() != null) u.getStudent().getId();
+            if (u.getEmployer() != null) u.getEmployer().getId();
+        });
+        return ResponseEntity.ok(ApiResponse.success(users));
     }
 
     @GetMapping("/users/role/{role}")

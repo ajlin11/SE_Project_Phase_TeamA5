@@ -2,6 +2,12 @@ package com.tess.controller;
 
 import com.tess.dto.response.ApiResponse;
 import com.tess.dto.response.NotificationResponse;
+import com.tess.entity.User;
+import com.tess.enums.NotificationType;
+import com.tess.enums.Role;
+import com.tess.exception.ResourceNotFoundException;
+import com.tess.repository.UserRepository;
+import java.util.List;
 import com.tess.security.UserDetailsImpl;
 import com.tess.service.NotificationService;
 import io.swagger.v3.oas.annotations.Operation;
@@ -23,6 +29,7 @@ import java.util.Map;
 public class NotificationController {
 
     private final NotificationService notificationService;
+    private final UserRepository userRepository;
 
     @GetMapping
     @Operation(summary = "Get all my notifications")
@@ -65,5 +72,55 @@ public class NotificationController {
             @AuthenticationPrincipal UserDetailsImpl current) {
         notificationService.markAsRead(id, current.getId());
         return ResponseEntity.ok(ApiResponse.success(null, "Notification marked as read"));
+    }
+
+    @PostMapping("/report")
+    @Operation(summary = "Submit a report about a job or user")
+    public ResponseEntity<ApiResponse<Void>> submitReport(
+            @RequestBody Map<String, Object> body,
+            @AuthenticationPrincipal UserDetailsImpl currentUser) {
+
+        // Find admin - get first user with ADMIN role
+        List<User> admins = userRepository.findByRole(Role.ADMIN, Pageable.unpaged()).getContent();
+
+        if (admins.isEmpty()) {
+            return ResponseEntity.ok(ApiResponse.success(null, "Report received"));
+        }
+
+        User admin = admins.get(0);
+
+        String reason = body.getOrDefault("reason", "No reason provided").toString();
+        String description = body.getOrDefault("description", "").toString();
+        String jobTitle = body.getOrDefault("jobTitle", "").toString();
+        String reportType = body.getOrDefault("reportType", "JOB").toString();
+        String studentName = body.getOrDefault("studentName", "").toString();
+        String companyName = body.getOrDefault("companyName", "").toString();
+
+        String message;
+        if (reportType.equals("STUDENT")) {
+            message = "🚩 REPORT — Student: " + studentName +
+                    " | Job: " + jobTitle +
+                    " | Reason: " + reason +
+                    (description.isEmpty() ? "" : " | Details: " + description);
+        } else if (reportType.equals("EMPLOYER")) {
+            message = "🚩 REPORT — Employer: " + companyName +
+                    " | Job: " + jobTitle +
+                    " | Reason: " + reason +
+                    (description.isEmpty() ? "" : " | Details: " + description);
+        } else {
+            message = "🚩 REPORT — Job: " + jobTitle +
+                    " | Reason: " + reason +
+                    (description.isEmpty() ? "" : " | Details: " + description);
+        }
+
+        notificationService.sendNotification(
+                admin.getId(),
+                NotificationType.MESSAGE_RECEIVED,
+                message,
+                currentUser.getId(),
+                "USER"
+        );
+
+        return ResponseEntity.ok(ApiResponse.success(null, "Report submitted successfully"));
     }
 }

@@ -108,11 +108,30 @@ public class StudentService {
         Student student = getStudentById(studentId);
         assertOwnership(student);
 
+        // Check for overlapping slots on the same day
+        for (int i = 0; i < requests.size(); i++) {
+            for (int j = i + 1; j < requests.size(); j++) {
+                AvailabilityRequest a = requests.get(i);
+                AvailabilityRequest b = requests.get(j);
+                if (a.getDayOfWeek() == b.getDayOfWeek()) {
+                    boolean overlap = a.getStartTime().isBefore(b.getEndTime())
+                            && b.getStartTime().isBefore(a.getEndTime());
+                    if (overlap) {
+                        throw new BadRequestException(
+                                "Overlapping time slots on " + a.getDayOfWeek() +
+                                        ": " + a.getStartTime() + "-" + a.getEndTime() +
+                                        " conflicts with " + b.getStartTime() + "-" + b.getEndTime()
+                        );
+                    }
+                }
+            }
+        }
+
         availabilityRepository.deleteByStudentId(studentId);
 
         List<Availability> slots = requests.stream().map(req -> {
             if (req.getEndTime().isBefore(req.getStartTime()) ||
-                req.getEndTime().equals(req.getStartTime())) {
+                    req.getEndTime().equals(req.getStartTime())) {
                 throw new BadRequestException("End time must be after start time");
             }
             return Availability.builder()
