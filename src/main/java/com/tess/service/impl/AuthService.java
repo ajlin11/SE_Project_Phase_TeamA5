@@ -146,14 +146,21 @@ public class AuthService {
     }
 
     private void validateStudentRegistration(RegisterRequest request) {
-        if (request.getAge() == null || request.getAge() < 16 || request.getAge() > 35) {
-            throw new BadRequestException("Student age must be between 16 and 35");
+        if (request.getAge() == null || request.getAge() < 16 || request.getAge() > 30) {
+            throw new BadRequestException("Student age must be between 16 and 30");
         }
         if (request.getUniversity() == null || request.getUniversity().isBlank()) {
             throw new BadRequestException("University is required for student registration");
         }
         if (Boolean.FALSE.equals(request.getActiveStudent())) {
             throw new BadRequestException("You must be an active student to register");
+        }
+        // Validate student institutional email
+        String email = request.getEmail().toLowerCase();
+        if (!email.contains(".edu") && !email.contains(".info")) {
+            throw new BadRequestException(
+                    "Students must register with an institutional email address (.edu or .info)"
+            );
         }
     }
 
