@@ -142,3 +142,8 @@ export const adminApi = {
     api.get<ApiResponse<Page<Job>>>(`/admin/jobs?page=${page}`),
   removeJob: (jobId: number) => api.post(`/admin/jobs/${jobId}/remove`),
 };
+
+export const reportApi = {
+  submit: (data: { reportedUserId: number; reason: string; description: string }) =>
+    api.post<ApiResponse<any>>('/notifications/report', data),
+};
